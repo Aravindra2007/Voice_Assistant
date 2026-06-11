@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # JARVIS (Just a Rather Very Intelligent System)
 
 #### This was my attempt to make a voice assistant similar to JARVIS (in iron man movie)
@@ -92,3 +93,7 @@ This project is licensed under [MIT License](https://github.com/Gladiator07/JARV
 - Generalized conversations can be made possible by incorporating Natural Language Processing
 - GUI can be made more nicer to look at and functional
 - More functionalities can be added
+=======
+# Voice_Assistant
+voice Assistant is created using jarvis application
+>>>>>>> e2425f0c2989cd05218134549d4de92f39296bf4
