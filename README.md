@@ -1,114 +1,125 @@
-# 🤖 JARVIS Voice Assistant
+# 🤖 JARVIS — Voice Assistant
 
-**Just A Rather Very Intelligent System** — a Python-based desktop voice assistant inspired by Iron Man's JARVIS. Built to automate everyday tasks on your PC using voice commands, featuring a sleek PyQt5 GUI.
+> **Just a Rather Very Intelligent System**  
+> A Python-powered voice assistant inspired by JARVIS from Iron Man, built to automate everyday tasks on your PC/laptop.
+
+---
+
+## 📖 About
+
+JARVIS is a desktop voice assistant that listens to your voice commands and performs a wide range of tasks — from opening applications and playing music, to answering general knowledge questions and checking the weather. It features a clean graphical user interface built with PyQt5.
 
 ---
 
 ## ✨ Features
 
-- 🕐 **Date & Time** — Ask for the current time or date at any moment
-- 🌦️ **Weather** — Get live weather updates for any city
-- 🚀 **App Launcher** — Launch applications on your PC by voice
-- 🌐 **Website Opener** — Open any website instantly
-- 📍 **Location & Distance** — Find any place and get the distance from your current location
-- 📰 **Top Headlines** — Fetches the latest news from Times of India
-- 🎵 **Music & YouTube** — Play local music or any video on YouTube
-- 📧 **Send Emails** — Compose and send emails hands-free
-- 🧮 **Math & General Q&A** — Powered by WolframAlpha for calculations and general queries
-- 📖 **Wikipedia Lookup** — Get summaries about any person or topic
-- 📅 **Google Calendar** — Check upcoming events and plans
-- 📝 **Notes** — Take and save voice notes in Notepad
-- 😂 **Jokes** — Ask for a random joke
-- 🖥️ **System Info** — Check RAM usage, battery health, and CPU usage
-- 🌍 **IP Address** — Retrieve your current public IP
-- 🖼️ **Screenshots** — Take and save screenshots with a custom filename
-- 🗂️ **Hide/Show Files** — Toggle visibility of all files in a folder
-- 🔀 **Window Switcher** — Switch between open windows by voice
-- 🖼️ **Animated GUI** — A live animated PyQt5 interface with a real-time clock
+- 🗣️ **Greet user** on startup
+- 🕐 **Tell current time and date**
+- 🚀 **Launch applications/software** on your PC
+- 🌐 **Open any website** in your browser
+- 🌤️ **Weather updates** for any city (via OpenWeatherMap)
+- 📍 **Location & distance finder** — opens maps and tells distance from your location
+- 💻 **System status** — RAM usage, battery health, CPU usage
+- 📅 **Upcoming events** from Google Calendar
+- 📚 **Wikipedia search** — brief info about any person or topic
+- 🔍 **Google search** anything
+- 🎵 **Play songs on YouTube** by voice
+- 📰 **Top headlines** (via Times of India)
+- 🎧 **Play local music**
+- 📧 **Send emails** with subject and content
+- ➗ **Math expression calculator** (e.g., *"Jarvis, calculate x + 135 - 234 = 345"*)
+- 🧠 **Answer generic questions** via Wolfram Alpha
+- 📝 **Take notes** in Notepad
+- 😂 **Tell random jokes**
+- 🌐 **Find your IP address**
+- 🪟 **Switch windows**
+- 📸 **Take screenshots** and save with a custom filename
+- 📁 **Hide/unhide files** in a folder
+- 🖥️ **Graphical User Interface** built with PyQt5
+
+---
+
+## 🎬 Demo
+
+Watch the project in action: [YouTube Demo](https://www.youtube.com/watch?v=oKtrHy0ERNA)
 
 ---
 
 ## 🛠️ Built With
 
-- **Python 3.8+**
-- **PyQt5** — GUI framework
-- **SpeechRecognition / PyAudio** — Voice input
-- **pyttsx3 / gTTS** — Text-to-speech
-- **WolframAlpha API** — Computational intelligence
-- **OpenWeatherMap API** — Weather data
-- **Google Calendar API** — Calendar events
-- **pywhatkit** — YouTube playback
-- **pyjokes** — Joke generation
-- **Wikipedia API** — Topic lookups
-- **pyautogui** — Screenshot & window switching
-
----
-
-## 📋 Prerequisites
-
-- Python 3.8 or higher
-- A working microphone
-- Anaconda (recommended) or a standard Python virtual environment
+- **Python 3.8.5**
+- [PyQt5](https://pypi.org/project/PyQt5/) — GUI framework
+- [SpeechRecognition](https://pypi.org/project/SpeechRecognition/) — Voice input
+- [pyttsx3](https://pypi.org/project/pyttsx3/) — Text-to-speech
+- [pywhatkit](https://pypi.org/project/pywhatkit/) — YouTube & WhatsApp automation
+- [wikipedia](https://pypi.org/project/wikipedia/) — Wikipedia queries
+- [wolframalpha](https://pypi.org/project/wolframalpha/) — Answering general questions
+- [psutil](https://pypi.org/project/psutil/) — System resource monitoring
+- [geopy](https://pypi.org/project/geopy/) — Location services
+- [google-api-python-client](https://pypi.org/project/google-api-python-client/) — Google Calendar integration
+- [selenium](https://pypi.org/project/selenium/) — Browser automation
 
 ---
 
 ## 🔑 API Keys Required
 
-Register and obtain API keys from the following services before running the project:
+Register and obtain the following API keys before running the project:
 
 | Service | Link |
 |---|---|
-| OpenWeatherMap | https://openweathermap.org/api |
-| WolframAlpha | https://www.wolframalpha.com/ |
-| Google Calendar | https://developers.google.com/calendar/auth |
+| OpenWeatherMap | [openweathermap.org/api](https://openweathermap.org/api) |
+| Wolfram Alpha | [wolframalpha.com](https://www.wolframalpha.com/) |
+| Google Calendar | [developers.google.com/calendar/auth](https://developers.google.com/calendar/auth) |
 
 ---
 
-## 🚀 Installation
+## ⚙️ Installation
 
-**1. Clone the repository**
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Aravindra2007/Voice_Assistant.git
 cd Voice_Assistant
 ```
 
-**2. Create and activate a virtual environment**
+### 2. Create the Config File
 
-Using Anaconda (recommended):
+Create a file named `config.py` in the `Jarvis/config/` directory with the following content:
+
+```python
+email = "<your_email>"
+email_password = "<your_email_password>"
+wolframalpha_id = "<your_wolframalpha_id>"
+```
+
+### 3. Set Up a Python Virtual Environment
+
+**Using Conda (recommended):**
+
 ```bash
 conda create -n jarvis python==3.8.5
 conda activate jarvis
 ```
 
-Or using standard venv:
+**Or using venv:**
+
 ```bash
 python -m venv myenv
-# Windows
-myenv\Scripts\activate
-# macOS/Linux
-source myenv/bin/activate
+myenv\Scripts\activate   # Windows
+source myenv/bin/activate  # Linux/macOS
 ```
 
-**3. Install dependencies**
+### 4. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-For PyAudio on Windows, install from a wheel file. See [this StackOverflow answer](https://stackoverflow.com/a/55630212) for instructions.
+### 5. Install PyAudio
 
-**4. Configure API keys**
+PyAudio requires a special installation step. Follow the instructions [here](https://stackoverflow.com/a/55630212) to install it from a wheel file.
 
-Create a file at `Jarvis/config/config.py` with the following content:
-
-```python
-email = "<your_email>"
-email_password = "<your_email_password>"
-wolframalpha_id = "<your_wolframalpha_app_id>"
-```
-
-**5. Run the assistant**
+### 6. Run the Application
 
 ```bash
 python main.py
@@ -116,76 +127,54 @@ python main.py
 
 ---
 
-## 🗂️ Project Structure
+## 📁 Project Structure
 
 ```
 Voice_Assistant/
 ├── Jarvis/
-│   ├── config/         # API keys and configuration
+│   ├── config/         # API keys and secret config files
 │   ├── features/       # Individual feature modules
 │   └── utils/          # GUI assets and images
-├── driver/             # Driver utilities
-├── myenv/              # Virtual environment (excluded from git)
-├── gui.ui              # PyQt5 UI layout file
+├── driver/             # Web driver (for Selenium)
+├── myenv/              # Python virtual environment
+├── gui.ui              # PyQt5 GUI layout file
 ├── main.py             # Main entry point
-├── requirements.txt    # Python dependencies
+├── requirements.txt    # All Python dependencies
 ├── .gitignore
-├── LICENSE
 ├── CONTRIBUTING.md
-└── README.md
+└── LICENSE
 ```
 
----
+### Adding a New Feature
 
-## 🎤 Example Voice Commands
-
-| Command | Action |
-|---|---|
-| `"Hey Jarvis"` / `"Wake up Jarvis"` | Wake / greet the assistant |
-| `"What's the time?"` | Tells current time |
-| `"What's the date?"` | Tells today's date |
-| `"Weather in [city]"` | Fetches weather for a city |
-| `"Open [website]"` | Opens a website in the browser |
-| `"Launch Chrome"` | Launches an application |
-| `"Tell me about [topic]"` | Wikipedia summary |
-| `"What is [question]?"` | WolframAlpha answer |
-| `"Play [song] on YouTube"` | Plays video on YouTube |
-| `"Send email"` | Initiates email composition |
-| `"Top headlines"` / `"News"` | Reads today's top news |
-| `"Take a screenshot"` | Captures and saves the screen |
-| `"Tell me a joke"` | Tells a random joke |
-| `"System status"` | Reports CPU, RAM, and battery |
-| `"Where is [place]?"` | Location and distance info |
-| `"Goodbye"` / `"Bye"` | Shuts down the assistant |
+1. Create a new `.py` file inside the `Jarvis/features/` folder and write your function.
+2. Register the function's definition in `__init__.py`.
+3. Add the voice command(s) that should trigger the feature in `main.py`.
 
 ---
 
-## 🔧 Adding New Features
+## 🚀 Future Improvements
 
-The codebase is modular and easy to extend:
-
-1. Create a new `.py` file inside `Jarvis/features/` with your feature function.
-2. Register the function in `Jarvis/__init__.py`.
-3. Add the voice command trigger(s) inside the `TaskExecution` loop in `main.py`.
+- Add NLP-based generalized conversation support
+- Improve and modernize the GUI
+- Add more smart home / IoT integrations
+- Cross-platform support (Linux & macOS)
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for the code of conduct and the process for submitting pull requests.
-
----
-
-## 🔮 Future Improvements
-
-- Natural Language Processing for more fluid, open-ended conversations
-- Enhanced and more interactive GUI
-- Cross-platform support (Linux & macOS)
-- Expanded application launcher with auto-detection
-- Smarter context memory across commands
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the code of conduct and the process for submitting pull requests.
 
 ---
 
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 👤 Author
+
+**Aravindra2007**  
+GitHub: [@Aravindra2007](https://github.com/Aravindra2007)
